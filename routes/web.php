@@ -13,15 +13,15 @@
 
 Route::get('/', function () {
     return view('pages.index');
-});
+})->name('home');
 
 Route::get('/about', function () {
     return view('pages.about');
-});
+})->name('about');
 
 Route::get('/contact', function () {
     return view('pages.contact');
-});
+})->name('contact');
 
 Route::post('/contact', function () {
 
@@ -33,7 +33,7 @@ Route::post('/contact', function () {
 });
 Route::get('/SignIn', function () {
     return view('pages.SignIn');
-});
+})->name('SignIn');
 Route::post('/SignIn', function () {
 
     $data = request()->all();
@@ -43,7 +43,7 @@ Route::post('/SignIn', function () {
 
 Route::get('/Signup', function () {
     return view('pages.Signup');
-});
+})->name('Signup');
 
     Route::post('/Signup', function () {
 
@@ -57,8 +57,16 @@ Route::get('/Signup', function () {
 
 Route::get('/logout', function () {
     return view('pages.logout');
+})->name('logout');
+
+Route::get('/viewmessages', function () {
+    return view('pages.viewmessages');
+})->name('viewmessages');
+
+Route::get('/airlinetickets', function () {
+    return view('pages.airlinetickets');
 });
 
-Route::get('/view messages', function () {
-    return view('pages.view messages');
+Route::get('/classschedule', function () {
+    return view('pages.classschedule');
 });
